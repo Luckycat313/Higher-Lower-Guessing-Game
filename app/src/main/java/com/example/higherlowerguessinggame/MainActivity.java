@@ -50,8 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             newGame();
         } else if (n>numberToFind) {
             msgText.setText(R.string.too_high);
+            Toast.makeText(this, "wrong number," +
+                    " number of tries :" + numberTries , Toast.LENGTH_SHORT).show();
         }else if(n<numberToFind){
             msgText.setText(R.string.too_low);
+            Toast.makeText(this, "wrong number," +
+                    " number of tries :" + numberTries , Toast.LENGTH_SHORT).show();
         }
     }
     private  void newGame(){
